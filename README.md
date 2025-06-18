@@ -1,0 +1,1 @@
+A model based on predicing on the Algerian fire Forest using Linear, Ridge, Lasso regression with help of dataset from kaggle performing various steps such as Dara analysis and Data cleaning, Data preprocessing , Feature Engineering, EDA and calculating various performance metrices
