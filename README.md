@@ -1,8 +1,24 @@
-About Dataset
-The dataset includes 244 instances that regroup a data of two regions of Algeria, namely the Bejaia region located in the northeast of Algeria and the Sidi Bel-abbes region located in the northwest of Algeria.
+📊 About the Dataset
 
-122 instances for each region.
+This dataset consists of 244 instances collected from two regions of Algeria 🇩🇿:
 
-The period from June 2012 to September 2012.
-The dataset includes 11 attributes and 1 output attribute (class)
-The 244 instances have been classified into fire (138 classes) and not fire (106 classes) classes.
+🌿 Bejaia Region (Northeast Algeria) – 122 instances
+
+🌾 Sidi Bel-abbes Region (Northwest Algeria) – 122 instances
+
+🗓️ Time Period: June 2012 to September 2012
+
+📌 The dataset contains:
+
+11 input attributes 📈
+
+1 output attribute 🏷️ (Class: Fire or Not Fire)
+
+🔥 Class Distribution:
+
+Fire – 138 instances
+
+🚫 Not Fire – 106 instances
+
+This data is ideal for building 🔍 classification models to predict wildfire occurrences! 🌲🔥
+
