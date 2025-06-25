@@ -1,24 +1,26 @@
-📊 About the Dataset
+## 📊 About the Dataset
 
-This dataset consists of 244 instances collected from two regions of Algeria 🇩🇿:
+This dataset consists of **244 instances** collected from two regions of **Algeria 🇩🇿** during the summer of 2012:
 
-🌿 Bejaia Region (Northeast Algeria) – 122 instances
+- 🌿 **Bejaia Region** (Northeast Algeria) – 122 instances  
+- 🌾 **Sidi Bel-abbes Region** (Northwest Algeria) – 122 instances  
 
-🌾 Sidi Bel-abbes Region (Northwest Algeria) – 122 instances
+🗓️ **Time Period:** June 2012 to September 2012
 
-🗓️ Time Period: June 2012 to September 2012
+---
 
-📌 The dataset contains:
+### 📌 Dataset Details:
 
-11 input attributes 📈
+- **11 input attributes** 📈 (e.g., temperature, humidity, wind speed, rain, etc.)  
+- **1 output attribute** 🏷️ – `Classes` (Fire 🔥 / Not Fire 🚫)
 
-1 output attribute 🏷️ (Class: Fire or Not Fire)
+---
 
-🔥 Class Distribution:
+### 🔥 Class Distribution:
 
-Fire – 138 instances
+- **Fire:** 138 instances 🔥  
+- **Not Fire:** 106 instances 🚫
 
-🚫 Not Fire – 106 instances
+---
 
-This data is ideal for building 🔍 classification models to predict wildfire occurrences! 🌲🔥
-
+This dataset is ideal for building **classification models** to predict wildfire occurrences and support early warning systems in fire-prone areas. 🌲🔥
