@@ -1,26 +1,74 @@
-## 📊 About the Dataset
+# 🔥 Algerian Forest Fire Prediction
 
-This dataset consists of **244 instances** collected from two regions of **Algeria 🇩🇿** during the summer of 2012:
-
-- 🌿 **Bejaia Region** (Northeast Algeria) – 122 instances  
-- 🌾 **Sidi Bel-abbes Region** (Northwest Algeria) – 122 instances  
-
-🗓️ **Time Period:** June 2012 to September 2012
+This project focuses on predicting forest fire occurrences using meteorological and fire weather index data collected during the **summer of 2012** from two Algerian regions: **Bejaia** and **Sidi Bel-abbes**. The aim is to build machine learning models that can help in developing early warning systems for wildfire management.
 
 ---
 
-### 📌 Dataset Details:
+## 📊 Dataset Overview
 
-- **11 input attributes** 📈 (e.g., temperature, humidity, wind speed, rain, etc.)  
-- **1 output attribute** 🏷️ – `Classes` (Fire 🔥 / Not Fire 🚫)
+| Attribute              | Description                                                |
+|------------------------|------------------------------------------------------------|
+| 📍 **Regions**         | Bejaia (Northeast) & Sidi Bel-abbes (Northwest), Algeria   |
+| 📆 **Time Period**     | June 2012 – September 2012                                 |
+| 🔢 **Total Instances** | 244                                                        |
+| 🌿 **Bejaia Region**   | 122 instances                                              |
+| 🌾 **Sidi Bel-abbes**  | 122 instances                                              |
+| 🧪 **Features**        | 11 input features (temperature, humidity, wind, rain, etc.)|
+| 🎯 **Target**          | `Classes` – Fire 🔥 / Not Fire 🚫                           |
 
 ---
 
-### 🔥 Class Distribution:
+## 📌 Features Description
 
-- **Fire:** 138 instances 🔥  
-- **Not Fire:** 106 instances 🚫
+- Temperature (°C)
+- RH (Relative Humidity %)
+- Ws (Wind speed km/h)
+- Rain (mm)
+- FFMC (Fine Fuel Moisture Code)
+- DMC (Duff Moisture Code)
+- DC (Drought Code)
+- ISI (Initial Spread Index)
+- BUI (Build-Up Index)
+- FWI (Fire Weather Index)
+- Region
 
 ---
 
-This dataset is ideal for building **classification models** to predict wildfire occurrences and support early warning systems in fire-prone areas. 🌲🔥
+## 🔥 Class Distribution
+
+| Class      | Count |
+|------------|-------|
+| 🔥 Fire     | 138   |
+| 🚫 Not Fire | 106   |
+
+---
+
+## 🧠 Models Implemented
+
+The following regression models were trained to predict **FWI (Fire Weather Index)** and classification models to predict `Classes` (Fire / Not Fire):
+
+- 🔹 Linear Regression  
+- 🔹 Ridge Regression  
+- 🔹 Lasso Regression  
+- 🔹 ElasticNet Regression  
+- 🔹 RidgeCV  
+- 🔹 LassoCV  
+
+📌 Among these, **Ridge Regression gave the best result**, achieving an **R² score of nearly 0.99**, showing excellent predictive power.
+
+### 🧪 Ridge Regression Code Snippet:
+
+```python
+from sklearn.linear_model import Ridge
+from sklearn.metrics import r2_score
+
+model_ridge = Ridge(alpha=0.1)
+model_ridge.fit(X_train_scaled, Y_train)
+y_pred2 = model_ridge.predict(X_test_scaled)
+print(r2_score(Y_test, y_pred2))  # Output: ~0.99
+```
+## ✅ Conclusion
+
+This project successfully demonstrates how environmental features can be used to predict wildfire events with high accuracy. Using **Ridge Regression**, we achieved a near-perfect **R² score of ~0.99** for predicting the Fire Weather Index.
+
+To enhance accessibility, I have also **created a web application using Streamlit**. This allows users to input weather conditions and receive real-time fire risk predictions through an interactive interface. 🔥🌲
